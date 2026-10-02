@@ -1,0 +1,116 @@
+:root {
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+    
+    --blancoLino: #FAFAFA;
+    --verdeSalvia: #4A5D4E;
+    --grisCarbon: #2B2B2B;
+    --rosaColorete: #D4A3A3;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* 1 rem = 10px */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+background-color: var(--blancoLino);
+    color: var(--grisCarbon);
+    font-family: 'Open Sans', sans-serif;
+}
+ 
+.header {
+    background-color: var(--verdeSalvia);
+    padding: 15px 0;
+}
+
+.barra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px  20px;
+}
+
+.logo-contenedor {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    z-index: 10;
+}
+
+@media (min-width: 768px) {
+    .barra {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+}
+
+.logo-img-nav {
+    height: auto;
+    max-height: 60px;
+    display: block;
+    transform: translatey(6px);
+}
+
+.logo_nombre {
+    color: var(--blancoLino);
+    text-decoration: none;
+    font-family: 'cormorant Garamond', serif;
+    font-size: 38px;
+    margin: 0;
+}
+
+.logo_bold {
+    font-weight: 700;
+    color: var(--rosaColorete)
+}
+
+.navegacion {
+    display: flex;
+    gap: 20px;
+}
+
+.navegacion_enlace {
+    color: var(--blancoLino);
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3 ease;
+}
+
+.btn-whatsapp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    transform: scale(1.1);
+    background-color: #20ba5a;
+}
+
+.btn-whatsapp img {
+    width: 35px;
+    height: 35px;
+}
