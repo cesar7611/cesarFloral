@@ -135,6 +135,7 @@ background-color: var(--blancoLino);
         justify-content: center;
         gap: 10px 15px; /* Espacio entre ellos a lo ancho y a lo alto */
         width: 100%;
+        margin-top: 45px;
     }
 
     /* 3. Ajustamos el tamaño del texto para pantallas móviles */
