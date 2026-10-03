@@ -114,3 +114,32 @@ background-color: var(--blancoLino);
     width: 35px;
     height: 35px;
 }
+
+/* ==========================================================================
+   Ajustes Responsivos para el Menú en Celulares 
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. Hacemos que la barra se adapte al contenido */
+    .barra {
+        display: flex;
+        flex-direction: column; /* Coloca el logo arriba y los enlaces abajo */
+        align-items: center;
+        gap: 15px; /* Le da espacio de separación entre el logo y el menú */
+        padding: 15px 0;
+    }
+
+    /* 2. Acomodamos los enlaces para que no se amontonen */
+    .navegacion {
+        display: flex;
+        flex-wrap: wrap; /* Si no caben en una línea, bajan ordenadamente a la siguiente */
+        justify-content: center;
+        gap: 10px 15px; /* Espacio entre ellos a lo ancho y a lo alto */
+        width: 100%;
+    }
+
+    /* 3. Ajustamos el tamaño del texto para pantallas móviles */
+    .navegacion_enlace {
+        font-size: 1.4rem; /* Hace las letras un poquito más legibles y pequeñas en cel */
+        text-align: center;
+    }
+}
