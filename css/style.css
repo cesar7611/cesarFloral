@@ -28,7 +28,7 @@ background-color: var(--blancoLino);
  
 .header {
     background-color: var(--verdeSalvia);
-    padding: 15px 0;
+    padding: 25px 0;
 }
 
 .barra {
@@ -75,44 +75,18 @@ background-color: var(--blancoLino);
 
 .navegacion {
     display: flex;
-    gap: 20px;
-}
+    justify-content: center;
+    gap: 200px;
+    padding: 15px 0;
+   }
 
 .navegacion_enlace {
-    color: var(--blancoLino);
+    color: var(--grisCarbon);
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 16px;
     transition: color 0.3 ease;
-}
-
-.btn-whatsapp {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 70px;
-    right: 50px;
-    background-color: #25d366;
-    color: #fff;
-    border-radius: 50%;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.btn-whatsapp:hover {
-    transform: scale(1.1);
-    background-color: #20ba5a;
-}
-
-.btn-whatsapp img {
-    width: 35px;
-    height: 35px;
 }
 
 /* ==========================================================================
@@ -124,18 +98,20 @@ background-color: var(--blancoLino);
         display: flex;
         flex-direction: column; /* Coloca el logo arriba y los enlaces abajo */
         align-items: center;
-        gap: 15px; /* Le da espacio de separación entre el logo y el menú */
-        padding: 15px 0;
+        gap: 8px; /* Le da espacio de separación entre el logo y el menú */
+        padding: 5px 0;
+        margin-top: 0px;
     }
 
     /* 2. Acomodamos los enlaces para que no se amontonen */
     .navegacion {
         display: flex;
         flex-wrap: wrap; /* Si no caben en una línea, bajan ordenadamente a la siguiente */
-        justify-content: center;
-        gap: 10px 15px; /* Espacio entre ellos a lo ancho y a lo alto */
+        justify-content: center; /* Distribuye los enlaces de manera uniforme */
+        gap: 8px 12px; /* Espacio entre ellos a lo ancho y a lo alto */
         width: 100%;
         margin-top: 45px;
+        padding: 5px 0px; /* Evita que los enlaces toquen los bordes de la pantalla */
     }
 
     /* 3. Ajustamos el tamaño del texto para pantallas móviles */
@@ -144,3 +120,31 @@ background-color: var(--blancoLino);
         text-align: center;
     }
 }
+
+/* 1. Diseña el círculo verde contenedor */
+.btn-whatsapp {
+    position: fixed !important;
+    width: 60px !important;
+    height: 60px !important;
+    bottom: 40px !important;
+    right: 30px !important;
+    background-color: #25d366 !important;
+    border-radius: 50% !important;
+    z-index: 10000 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 2. 🎯 EL CAMBIO DEFINITIVO: Obliga a la imagen gigante a encogirse a 35 píxeles */
+.whatsapp-icono {
+    width: 35px !important;
+    height: 35px !important;
+    max-width: 35px !important;
+    max-height: 35px !important;
+    display: block !important;
+    object-fit: contain !important;
+}
+
+
