@@ -5,7 +5,8 @@
     --blancoLino: #FAFAFA;
     --verdeSalvia: #4A5D4E;
     --grisCarbon: #2B2B2B;
-    --rosaColorete: #D4A3A3;
+    --rosaColorete: #ec7979;
+    --amarillo: #d3f20a;
 }
 
 html {
@@ -126,7 +127,7 @@ background-color: var(--blancoLino);
     position: fixed !important;
     width: 60px !important;
     height: 60px !important;
-    bottom: 60px !important;
+    bottom: 30px !important;
     right: 30px !important;
     background-color: #25d366 !important;
     border-radius: 50% !important;
@@ -146,5 +147,95 @@ background-color: var(--blancoLino);
     display: block !important;
     object-fit: contain !important;
 }
+
+/* ========================================================================
+    Menú Desplegable Estilo EnviaFlores (Estructura Limpia)
+    ======================================================================== */
+
+/* Paso 1: El ancla principal (La pestaña Flores Amarillas) */
+.menu-desplegable {
+    position: relative;
+    display: inline-block;
+}
+
+/* Paso 2: 🔒 LA TARJETA BLANCA (Con el girasol y los textos de lado) */
+.submenu-lista {
+    position: absolute;
+    top: 100%;   
+    left: 50%;  
+    transform: translateX(-50%) translateY(10px); 
+    
+    /* 🎨 DEVOLVEMOS LA CAJA BLANCA PREMIUM */
+    background-color: var(--blancoLino); 
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15); 
+    border-radius: 12px; 
+    padding: 20px; /* Colchón de aire adentro de la caja */
+    z-index: 1000; 
+
+    /* 🚀 AGRANDAMOS LA CAJA: Espacio amplio para que quepan de lado */
+    min-width: 200px; 
+    height: auto; /* Deja que la altura se adapte a tus 3 enlaces */
+
+    /* 🚀 ACOMODO HORIZONTAL: Flor a la izquierda, lista a la derecha */
+    display: flex;
+    flex-direction: column; /* Empuja los textos a un lado de la flor */
+    align-items: center;/* Centra de forma vertical ambos elementos */
+    
+    
+    /* Invisibilidad por defecto para el efecto Hover */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+}
+
+/* 🌻 PASO CLAVE: Este bloque se encarga de dibujar el Girasol EXCLUSIVAMENTE a la izquierda */
+.submenu-lista::before {
+    content: "";
+    display: block;
+    width: 100px;  /* Tamaño estético y compacto para tu flor */
+    height: 100px;
+    background-image: url('../img/girasol.jpg'); /* Verifica que tu imagen se llame así */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Paso 3: 🎯 EL DISPARADOR (Muestra la tarjeta al posicionar el mouse) */
+.menu-desplegable:hover .submenu-lista {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.submenu-lista li {
+    list-style: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+/* Paso 5: 🎨 EL DISEÑO DE LAS LETRAS EN LA COLUMNA DE LA DERECHA */
+.submenu-lista li a {
+    display: block;
+    color: var(--grisCarbon); 
+    padding: 8px 12px;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center; /* Alinea tus enlaces de forma prolija */
+    transform: none; 
+    text-shadow: none; 
+    transition: color 0.5s ease;
+    background-color: transparent;
+}
+
+/* Paso 6: Cuando el mouse pasa sobre una opción a la derecha del girasol */
+.submenu-lista li a:hover {
+    color: var(--amarillo); /* Cambia de forma fina al guinda de tu marca */
+    background-color: transparent;
+}
+
 
 
