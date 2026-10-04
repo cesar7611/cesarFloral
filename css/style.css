@@ -237,5 +237,24 @@ background-color: var(--blancoLino);
     background-color: transparent;
 }
 
+/* ==========================================================================
+   Títulos Principales de las Páginas
+   ========================================================================== */
+.titulo-pagina {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.8rem;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: #222222; /* Un gris oscuro casi negro muy elegante */
+}
+
+.subtitulo-pagina {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    color: #666666; /* Gris suave para que contraste */
+    margin-bottom: 50px;
+}
 
 
