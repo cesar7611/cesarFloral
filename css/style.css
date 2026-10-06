@@ -257,4 +257,41 @@ background-color: var(--blancoLino);
     margin-bottom: 50px;
 }
 
+/* --- Sección de Categorías --- */
+/* 1. El esqueleto principal que limita el ancho en tu monitor */
+/* Agrega esto al final para controlar las imágenes */
+.tarjeta-foto img {
+    width: 100%;        /* Obliga a la foto a medir el ancho de la caja */
+    height: 100%;       /* Obliga a la foto a medir los 200px de alto de la caja */
+    object-fit: cover;  /* Corta los lados sobrantes para que no se deforme ni se estire */
+    display: block;     /* Elimina espacios en blanco basura debajo de la foto */
+}
 
+.barra-fotos-seccion {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 2. El contenedor que obliga a las cajas a ponerse en fila */
+.contenedor-barra {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+}
+
+/* 3. El tamaño fijo que va a tener cada una de las 4 secciones */
+.tarjeta-foto {
+    flex: 1;
+    height: 400px; /* <--- Esta será la altura real de tu barra */
+    border-radius: 12px;
+}
+
+/* 4. Colores temporales para identificar cada sección */
+
+.caja-azul { background-color: #4da6ff; }
+.caja-verde { background-color: #2ecc71; }
+.caja-morada { background-color: #9b59b6; }
